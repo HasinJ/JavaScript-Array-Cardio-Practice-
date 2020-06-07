@@ -99,6 +99,12 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    let byLastNames = people.sort( (lastPerson,nextPerson) => {
+      let [last1, first1] = lastPerson.split(', ');
+      let [last2, first2] = nextPerson.split(', ');
+      return last1>last2 ? 1:-1
+    } )
+    console.table(byLastNames);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
