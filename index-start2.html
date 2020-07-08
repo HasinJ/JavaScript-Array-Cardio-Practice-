@@ -59,12 +59,13 @@
       bLived = b.passed - b.year;
       return aLived < bLived ? 1:-1;
     });
-
     console.table(lived)
 
-    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name (use on the websites console)
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+    let category = document.querySelector('.mw-category');
+    let links = Array.from(category.querySelectorAll('a'));
+    let text = links.map(link => {return link.textContent}).filter(street => street.includes('de'));
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
